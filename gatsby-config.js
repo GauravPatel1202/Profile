@@ -4,15 +4,13 @@ if (process.env.ENVIRONMENT !== "production") {
   dotenv.config();
 }
 
-
 const { spaceId, accessToken } = process.env;
-
 
 module.exports = {
   siteMetadata: {
-    title: `Muthu`,
+    title: `Gaurav Patel`,
     description: `Personal Site`,
-    author: `Muthu`
+    author: `gaurav`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,11 +18,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -36,14 +34,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Muthu`,
-        short_name: `Muthu`,
+        name: `Gaurav Patel`,
+        short_name: `Gaurav`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#333`,
-        icon: `src/images/fev_icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/images/fev_icon.png`, // This path is relative to the root of the site.
+      },
     }, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
-    `gatsby-plugin-offline`
-  ]
+    `gatsby-plugin-offline`,
+  ],
 };

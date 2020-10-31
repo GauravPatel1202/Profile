@@ -11,10 +11,10 @@ import Share from "../components/share";
 export default class blogPost extends Component {
   render() {
     const data = this.props.data.contentfulBlogs;
-    const disqusShortname = "Muthu";
+    const disqusShortname = "gaurav";
     const disqusConfig = {
       identifier: data.id,
-      title: data.title
+      title: data.title,
     };
 
     const siteurl = this.props.data.contentfulSiteInformation.siteUrl + "/";
@@ -22,10 +22,10 @@ export default class blogPost extends Component {
       .twiteerHandle;
     const socialConfigss = {
       site: {
-        siteMetadata: { siteurl, twiteerhandle }
+        siteMetadata: { siteurl, twiteerhandle },
       },
       title: data.title,
-      slug: data.slug
+      slug: data.slug,
     };
 
     return (
@@ -36,7 +36,7 @@ export default class blogPost extends Component {
             `Muthu`,
             `Frontend Developer`,
             `Developer`,
-            `${data.title}`
+            `${data.title}`,
           ]}
         />
         <div className="site-container blog-post">
@@ -49,8 +49,8 @@ export default class blogPost extends Component {
                 objectPosition="50% 50%"
               />
             ) : (
-                <div className="no-image"></div>
-              )}
+              <div className="no-image"></div>
+            )}
 
             <div className="details">
               <h1 className="title">{data.title}</h1>
@@ -60,7 +60,7 @@ export default class blogPost extends Component {
               </span>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: data.description.childMarkdownRemark.html
+                  __html: data.description.childMarkdownRemark.html,
                 }}
               />
             </div>
@@ -69,8 +69,8 @@ export default class blogPost extends Component {
                 ...socialConfigss.site.siteMetadata.twiteerhandletitle,
                 config: {
                   url: `${siteurl}${socialConfigss.slug}`,
-                  title: `${socialConfigss.title}`
-                }
+                  title: `${socialConfigss.title}`,
+                },
               }}
             />
             <DiscussionEmbed

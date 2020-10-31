@@ -10,7 +10,7 @@ export default class PhotosPage extends Component {
     super(props);
     this.state = {
       activePopup: false,
-      selectedItem: 0
+      selectedItem: 0,
     };
   }
 
@@ -22,7 +22,12 @@ export default class PhotosPage extends Component {
       <Layout>
         <SEO
           title="Photos"
-          keywords={[`Muthu`, `Frontend Developer`, `Developer`, `Photo`]}
+          keywords={[
+            `Gaurav Patel`,
+            `Frontend Developer`,
+            `Developer`,
+            `Photo`,
+          ]}
         />
         <div className="site-container blogs-page" id="Blogs">
           <div className="container">
@@ -38,7 +43,7 @@ export default class PhotosPage extends Component {
                       onClick={() => {
                         this.setState({
                           activePopup: true,
-                          selectedItem: index
+                          selectedItem: index,
                         });
                       }}
                     >
@@ -58,7 +63,7 @@ export default class PhotosPage extends Component {
                   className="popup-layer"
                   onClick={() => {
                     this.setState({
-                      activePopup: false
+                      activePopup: false,
                     });
                   }}
                 ></span>
@@ -68,7 +73,7 @@ export default class PhotosPage extends Component {
                     className="fas fa-times"
                     onClick={() => {
                       this.setState({
-                        activePopup: false
+                        activePopup: false,
                       });
                     }}
                   ></i>
@@ -79,8 +84,8 @@ export default class PhotosPage extends Component {
                 </div>
               </div>
             ) : (
-                ""
-              )}
+              ""
+            )}
           </div>
         </div>
       </Layout>
