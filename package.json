@@ -1,9 +1,9 @@
 {
-  "name": "Muthu",
+  "name": "GauravPatel",
   "private": true,
   "description": "My Profile  with JAMstack",
   "version": "0.1.0",
-  "author": "Muthu <muthuks@gmail.com>",
+  "author": "Muthu <patelgaurav1202@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "disqus-react": "^1.0.7",
